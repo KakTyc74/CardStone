@@ -1,6 +1,6 @@
 class Card(object):
     '''Base class for one card'''
-    def __init__(self, name, mana, hp, atk):
+    def __init__(self, name, mana, atk, hp):
         self.name = name
         self.mana = mana
         self.hp = int(hp)
@@ -18,7 +18,7 @@ class Card(object):
           pass
     def __str__(self):
  #       rep = '' ' mana = ' + str(self.mana)  + ' hp = ' + str(self.hp) + ' atk = ' + str(self.atk)
-         rep = str(self.name) + ' hp = ' + str(self.hp) + ' atk = ' + str(self.atk)
+         rep = str(self.name) + ' atk = ' + str(self.atk) + ' hp = ' + str(self.hp) 
          return rep
 
 class Player(object):

@@ -4,11 +4,11 @@ from func import fight, cdestr, chkdead, chkwin
 
 
 def game_loop():
-    # Card(name, mana, hp, atk)
-    card1 = Card("card1", "2", "5" , "2")  
-    card2 = Card("card2", "6", "10", "2")
-    card3 = Card("card3", "2", "6" , "1")  
-    card4 = Card("card4", "1", "2", "3")
+    # Card(name, mana, atk, hp)
+    card1 = Card("card1", "2", "2" , "5")  
+    card2 = Card("card2", "6", "2", "10")
+    card3 = Card("card3", "2", "1" , "6")  
+    card4 = Card("card4", "1", "3", "2")
     a=0
     q=0
     c=0
@@ -49,7 +49,7 @@ def game_loop():
             defh = ccard
         input('Для продолжения нажмите любую клавишу')
         print ('\n---------------------------------FIGHT TURN',t,'----------------------------------')
-        for h in range(0,min(len(offh),len(defh))):
+        for h in range(0,min(len(offh),len(defh))): #выбор индекса атакующей карты
             fight(offh[h-2+len(offh)], defh[h-2+len(defh)])
             q = chkwin(pcard,ccard,h) # удалить h, когда вынесем комменатрии о смерти карты в отдельну функцию
     input ('\n\nНажмите любую клавишу, чтобы выйти')
