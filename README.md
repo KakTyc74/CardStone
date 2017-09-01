@@ -1,3 +1,6 @@
 # CardStone
-# Card game written on Python
-# Not really game yet...
+
+1. Pygame
+2. Выбор цели при атаке
+3. Игровое поле
+4. Игрок (мана, победа при смерти)
