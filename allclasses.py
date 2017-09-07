@@ -31,3 +31,5 @@ class Player(object):
         rep = str(self.name)
     def dead(self):
         return len(hand) == 0
+
+#class Deck(object):
