@@ -1,3 +1,14 @@
+from settings import *
+
+class Game(object):
+    def __init__(self):
+        pygame.init()
+        gameDisplay = pygame.display.set_mode ((display_width,display_height))
+        
+        pygame.display.set_caption('RHSB')
+        clock = pygame.time.Clock()
+
+
 class Card(object):
     '''Base class for one card'''
     def __init__(self, name, mana, atk, hp):

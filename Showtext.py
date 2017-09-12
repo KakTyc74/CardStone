@@ -42,11 +42,13 @@ def message_display(text,x,y,fontsize):
     gameDisplay.blit(TextSurf, TextRect)
     
 def choice():
-    message_display("Выбери карту из 4", display_width/2, display_height/2,35)
-    btn1pos = [display_width/2-25, display_height/2+100, 50, 50]
-    if btn(btn1pos, red, 'Выход', 12, mouse_pos_in_rect(btn1pos)) and mbu:
-        pygame.quit()
-        quit()
+    message_display("Выбери 2 карты", display_width/2, display_height/2-150,35)
+    choicelist = []
+    for i in range(4):
+        tempx = display_width/2 - (4*100 + (4-1)*50)/2 + (50+100)*i
+        choicelist.append ([tempx, display_height/2, 100, 150])
+    for btni in choicelist:
+        btn(btni, red, 'Выход', 12, mouse_pos_in_rect(btni))
 
 def mouse_pos_in_rect(btn1pos):
     [x,y,width,height] = btn1pos

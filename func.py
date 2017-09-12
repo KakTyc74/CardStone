@@ -16,7 +16,7 @@ def chkdead(hand):
   #  while not d <= len(hand):
     for card in hand:
         if card.dead():
-            hand.remove(card) 
+            hand.remove(card)
     return len(hand) == 0
 
 def chkwin(pcard,ccard,h):
